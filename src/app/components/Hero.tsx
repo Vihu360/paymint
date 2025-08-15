@@ -4,6 +4,7 @@ import CentralLogo from "../Icons/CentralLogo";
 import DLocalLogo from "../Icons/DLocalLogo";
 import PayPalLogo from "../Icons/PayPalLogo";
 import QuickBooksLogo from "../Icons/QuickBooks";
+import Navbar from "./Navbar";
 
 
 const ServiceIcon: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -14,7 +15,38 @@ const ServiceIcon: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 
 const Hero: React.FC = () => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col gap-10 items-center">
+      <div className=" z-10 text-center max-w-3xl mx-auto ">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight">
+          Say <span className="text-pink-400">Hello {" "}</span>to financial Integrations in one click
+        </h1>
+        <p className="mt-6 text-lg md:text-xl text-slate-400 max-w-xl mx-auto">
+          Smart payment orchestration with real-time routing, instant failover, and easy integrations.
+        </p>
+       <button className="relative group mt-10 cursor-pointer px-8 py-3 bg-black/20 backdrop-blur-lg text-pink-400 text-sm font-semibold rounded-full transition-all duration-300 transform hover:scale-105 hover:bg-gradient-to-r hover:from-pink-400/30 hover:to-pink-500/40 hover:backdrop-blur-xl hover:text-black overflow-hidden shadow-lg shadow-black/20">
+        {/* Glassmorphism overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/10 to-white/5 rounded-full opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+        
+        {/* Hover glassmorphism overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-pink-300/20 via-pink-400/30 to-pink-500/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm"></div>
+        {/* Animated border */}
+        <div className="absolute inset-0 rounded-full border-2 border-pink-500/30"></div>
+        <div className="absolute inset-0 rounded-full border-2 border-transparent group-hover:opacity-0 transition-opacity duration-300">
+          <div className="absolute inset-0 rounded-full border-2 border-pink-500 border-l-transparent border-b-transparent animate-spin opacity-80 group-hover:animate-none"></div>
+        </div>
+        
+        {/* Static border on hover */}
+        <div className="absolute inset-0 rounded-full border-2 border-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        
+        {/* Button content */}
+        <span className="relative z-10 flex items-center gap-2">
+          BOOK A DEMO 
+          <span className="transition-transform duration-300 group-hover:translate-x-1">
+            &raquo;
+          </span>
+        </span>
+      </button>
+      </div>
       {/* Graphics Canvas */}
       <div className="relative w-[1000px] h-[600px] scale-[0.6] sm:scale-[0.8] lg:scale-100 -mb-24 sm:-mb-16 md:-mb-8 -mt-32 sm:-mt-24 md:-mt-16">
         <div className="absolute inset-0 z-0">
@@ -62,39 +94,10 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Text Content */}
-      <div className=" z-10 text-center max-w-3xl mx-auto -mt-20">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight">
-          Say <span className="text-pink-400">Hello {" "}</span>to financial Integration in one click
-        </h1>
-        <p className="mt-6 text-lg md:text-xl text-slate-400 max-w-xl mx-auto">
-          Embed financial connectivity into your product with an integration
-          platform designed for speed and scale.
-        </p>
-       <button className="relative group mt-10 cursor-pointer px-8 py-3 bg-black/20 backdrop-blur-lg text-pink-400 text-sm font-semibold rounded-full transition-all duration-300 transform hover:scale-105 hover:bg-gradient-to-r hover:from-pink-400/30 hover:to-pink-500/40 hover:backdrop-blur-xl hover:text-black overflow-hidden shadow-lg shadow-black/20">
-        {/* Glassmorphism overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/10 to-white/5 rounded-full opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-        
-        {/* Hover glassmorphism overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-300/20 via-pink-400/30 to-pink-500/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm"></div>
-        {/* Animated border */}
-        <div className="absolute inset-0 rounded-full border-2 border-pink-500/30"></div>
-        <div className="absolute inset-0 rounded-full border-2 border-transparent group-hover:opacity-0 transition-opacity duration-300">
-          <div className="absolute inset-0 rounded-full border-2 border-pink-500 border-l-transparent border-b-transparent animate-spin opacity-80 group-hover:animate-none"></div>
-        </div>
-        
-        {/* Static border on hover */}
-        <div className="absolute inset-0 rounded-full border-2 border-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        
-        {/* Button content */}
-        <span className="relative z-10 flex items-center gap-2">
-          BOOK A DEMO 
-          <span className="transition-transform duration-300 group-hover:translate-x-1">
-            &raquo;
-          </span>
-        </span>
-      </button>
+      <div>
+        hello
       </div>
+      
     </div>
   );
 };
